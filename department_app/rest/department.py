@@ -37,7 +37,7 @@ class Department(Resource):
         return department_schema.dump(department), 200
 
     @classmethod
-    def put(self, uuid):
+    def put(cls, uuid):
         """
         Updates a department by its uuid in case such a department has been found and returns
         it in json format with status code 200. Returns an error message with status code
@@ -53,11 +53,12 @@ class Department(Resource):
             return error.messages, 400
         if department.name.isspace():
             logger.info(
-                f'Failed to edit department: only whitespaces in department name.')
+                'Failed to edit department: only whitespaces in department name.')
             abort(400, message="Empty department name is not allowed. Please provide some.")
         department_service.update_in_db()
         logger.info(
-            f'Succeeded to update department: name "{department.name}", description "{department.description}"')
+            f'Succeeded to update department: name "{department.name}",'
+            f' description "{department.description}"')
         return department_schema.dump(department), 200
 
     @classmethod
@@ -107,7 +108,8 @@ class DepartmentList(Resource):
         name = request.json['name']
         department_exists_check = department_service.find_by_name(name)
         if department_exists_check:
-            logger.info(f'Failed to add a new department: department with name {name} already exists')
+            logger.info(f'Failed to add a new department:'
+                        f' department with name {name} already exists')
             abort(400, description=f"Department with name {name} already exists.")
         try:
             department = department_schema.load(request.json)
@@ -115,9 +117,10 @@ class DepartmentList(Resource):
             return error.messages, 400
         if department.name.isspace():
             logger.info(
-                f'Failed to add a new department: only whitespaces in department name.')
+                'Failed to add a new department: only whitespaces in department name.')
             abort(400, description="Department name should not contain only whitespaces.")
         department_service.save_to_db(department)
         logger.info(
-            f'Succeeded to add department: name "{department.name}", description "{department.description}"')
+            f'Succeeded to add department: name "{department.name}",'
+            f' description "{department.description}"')
         return department_schema.dump(department), 201

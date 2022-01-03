@@ -10,6 +10,7 @@ from department_app.schemas.employee import EmployeeSchema
 from department_app.models.department import DepartmentModel
 from department_app.service.department import DepartmentService
 
+
 # pylint: disable=too-many-ancestors
 class DepartmentSchema(ma.SQLAlchemyAutoSchema):
     """

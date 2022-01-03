@@ -46,7 +46,7 @@ class Employee(Resource):
         return employee_schema.dump(employee), 200
 
     @classmethod
-    def put(self, uuid):
+    def put(cls, uuid):
         """
         Updates a employee by its uuid in case such an employee has been found and returns
         it in json format with status code 200. Returns an error message with status code
@@ -55,7 +55,7 @@ class Employee(Resource):
         :return: json representation of the employee and a status code 200 or an error
         message and a status code 400
         """
-        args = self.parser.parse_args()
+        args = cls.parser.parse_args()
         employee = employee_service.find_by_uuid(uuid)
         try:
             employee = employee_schema.load(request.json, instance=employee)
@@ -63,13 +63,15 @@ class Employee(Resource):
             return error.messages, 400
         if employee.name.isspace():
             logger.info(
-                f'Failed to edit employee: only whitespaces in employee name.')
+                'Failed to edit employee: only whitespaces in employee name.')
             abort(400, message="Please provide some name.")
         employee.department = department_service.find_by_uuid(args['department_uuid'])
         employee_service.update_in_db()
         logger.info(
-            f'Succeeded to edit employee with name "{employee.name}", birth_date: "{employee.birth_date}", '
-            f'salary: "{employee.salary}" and department: "{employee.department.name}"')
+            f'Succeeded to edit employee with name "{employee.name}", '
+            f'birth_date: "{employee.birth_date}", '
+            f'salary: "{employee.salary}" and '
+            f'department: "{employee.department.name}"')
         return employee_schema.dump(employee), 200
 
     @classmethod
@@ -126,13 +128,13 @@ class EmployeeList(Resource):
             return error.messages, 400
         if employee.name.isspace():
             logger.info(
-                f'Failed to add a new employee: only whitespaces in employee name.')
+                'Failed to add a new employee: only whitespaces in employee name.')
             abort(400, description="Employee name should not contain only whitespaces.")
         employee.department = department_service.find_by_uuid(args['department_uuid'])
         employee_service.save_to_db(employee)
+        name = employee.name
         logger.info(
-            f'Succeeded to add employee with name "{employee.name}", birth_date: "{employee.birth_date}", '
-            f'salary: "{employee.salary}" and department: "{employee.department.name}"')
+            f'Succeeded to add employee with name "{name}"')
         return employee_schema.dump(employee), 201
 
 

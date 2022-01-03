@@ -25,9 +25,9 @@ def get_logger():
     werkzeug_logger = logging.getLogger('werkzeug')
     werkzeug_logger.setLevel(logging.ERROR)
     # Create logger
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
-    logger.handlers.clear()
+    application_logger = logging.getLogger()
+    application_logger.setLevel(logging.DEBUG)
+    application_logger.handlers.clear()
     # File handler
     file_handler = logging.handlers.RotatingFileHandler(
         'logfile.log',
@@ -42,9 +42,9 @@ def get_logger():
     file_handler.setFormatter(formatter)
     stream_handler.setFormatter(formatter)
     # Add file and console handler to logger
-    logger.addHandler(file_handler)
-    logger.addHandler(stream_handler)
-    return logger
+    application_logger.addHandler(file_handler)
+    application_logger.addHandler(stream_handler)
+    return application_logger
 
 
 logger = get_logger()

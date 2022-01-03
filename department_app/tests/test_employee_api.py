@@ -1,7 +1,7 @@
 """
 This module is used to test employee api, it
 defines the following class:
-- TestDepartmentApi to test the department api functionality
+- TestEmployeeApi to test the employee api functionality
 """
 
 import json
@@ -18,7 +18,7 @@ from department_app.models.employee import EmployeeModel
 from department_app.tests.serialization_funcs import emp_to_json
 
 
-class TestDepartmentApi(BaseTestCase):
+class TestEmployeeApi(BaseTestCase):
     """
     Employee Api test class.
     """
@@ -34,12 +34,6 @@ class TestDepartmentApi(BaseTestCase):
         self.employee_1 = EmployeeModel('Joe Travis', date(1996, 5, 12), 2000)
         self.employee_2 = EmployeeModel('Lisa Simons', date(1990, 8, 10), 3500)
         self.department = DepartmentModel('Finance', 'Some finance department.')
-
-    # def tearDown(self):
-    #     """
-    #     Defines instructions that will be executed after each test.
-    #     """
-    #     super().tearDown()
 
     @patch('department_app.rest.employee.employee_service.find_all', autospec=True)
     def test_get_employees_success(self, mock_get):

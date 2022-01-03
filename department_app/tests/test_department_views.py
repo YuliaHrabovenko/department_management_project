@@ -21,12 +21,6 @@ class TestDepartmentViews(BaseTestCase):
         self.app.testing = True
         self.client = self.app.test_client()
 
-    # def tearDown(self):
-    #     """
-    #     Defines instructions that will be executed after each test.
-    #     """
-    #     super().tearDown()
-
     def test_departments(self):
         """
         Checks whether get response to /departments

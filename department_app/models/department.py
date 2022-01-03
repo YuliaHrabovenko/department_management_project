@@ -7,6 +7,7 @@ from department_app.extensions import db
 
 # pylint: disable=too-few-public-methods
 
+
 class DepartmentModel(db.Model):
     """
     The DepartmentModel object represents department table in db.

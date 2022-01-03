@@ -145,7 +145,7 @@ class TestDepartmentService(BaseTestCase):
         is successfully returned from the database.
         """
         department = DepartmentModel.query.filter_by(uuid=self.department1.uuid).first()
-        self.assertEqual(28, self.department_service.find_employees_average_age(department))
+        self.assertEqual(29, self.department_service.find_employees_average_age(department))
 
     def test_find_employees_average_age_null(self):
         """
