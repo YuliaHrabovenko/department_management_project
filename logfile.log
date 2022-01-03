@@ -1,0 +1,12 @@
+2022-01-03 00:00:06,543 - INFO - Succeeded to update department: name "R&D", description "Providing insights into the market and developing new services."
+2022-01-03 00:00:35,567 - INFO - Succeeded to update department: name "Management", description "The coordination of human, financial, information resources."
+2022-01-03 00:01:25,993 - INFO - Succeeded to update department: name "Finance", description "Acquiring and managing funds within the organization."
+2022-01-03 00:05:17,799 - INFO - Succeeded to add employee with name "Mary Gibson", birth_date: "1997-07-10 00:00:00", salary: "1500" and department: "Management"
+2022-01-03 00:05:33,482 - INFO - Succeeded to edit employee with name "Mary Gibson", birth_date: "1997-07-10 00:00:00", salary: "2500" and department: "Management"
+2022-01-03 00:06:05,683 - INFO - Failed to edit employee: only whitespaces in employee name.
+2022-01-03 00:06:31,967 - INFO - Succeeded to edit employee with name "Jennifer Bales", birth_date: "2002-03-08 00:00:00", salary: "1300" and department: "R&D"
+2022-01-03 00:07:11,405 - INFO - Search by period between dates: from "1990-02-15 00:00:00" to "2022-01-03 00:00:00"
+2022-01-03 00:07:13,730 - INFO - Search by period between dates: from "1990-02-15 00:00:00" to "2022-01-03 00:00:00"
+2022-01-03 00:07:28,670 - INFO - Search by period between dates: from "2000-06-01 00:00:00" to "2022-01-03 00:00:00"
+2022-01-03 00:08:06,555 - INFO - Search by exact date: "1997-07-10 00:00:00"
+2022-01-03 00:12:12,808 - INFO - Failed to add a new department: department with name Management already exists
