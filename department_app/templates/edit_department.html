@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <div class="container mt-3">
+        <div class="content-section border pl-4 pr-4 mb-4">
+            <form id="editDepForm">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                    <legend class="mb-4 pb-2 text-center">Edit Department</legend>
+                    <div class="form-group">
+                        {{ form.name.label(class="form-control-label")}}
+                        {% if form.name.errors %}
+                            {{ form.name(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.name.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.name(class="form-control form-control-lg") }}
+                            <span id="name_error" style="color:red;"></span>
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.description.label(class="form-control-label")}}
+                        {% if form.description.errors %}
+                            {{ form.description(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.description.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.description(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group" id="submitBtn">
+                        {{ form.submit(class="btn btn-outline-primary") }}
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+
+	<script type="text/javascript" src="{{ url_for('static', filename='js/edit_department.js') }}"></script>
+{% endblock %}

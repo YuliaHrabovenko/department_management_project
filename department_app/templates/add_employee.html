@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <div class="container mt-3">
+        <div class="content-section border pl-4 pr-4 mb-4">
+            <form id="addEmpForm">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                    <legend class="mb-4 pb-2 text-center">Add Employee</legend>
+                    <div class="form-group">
+                        {{ form.name.label(class="form-control-label")}}
+                        {% if form.name.errors %}
+                            {{ form.name(class="form-control form-control-lg is-invalid col-md-3") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.name.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.name(class="form-control form-control-lg") }}
+                            <span id="name_error" style="color:red;"></span>
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.birth_date.label(class="form-control-label")}}
+                        {% if form.birth_date.errors %}
+                            {{ form.birth_date(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.birth_date.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.birth_date(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.department.label(class="form-control-label")}}
+                        {% if form.department.errors %}
+                            {{ form.department(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.department.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.department(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.salary.label(class="form-control-label")}}
+                        {% if form.salary.errors %}
+                            {{ form.salary(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.salary.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.salary(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group" id="submitBtn">
+                        {{ form.submit(class="btn btn-outline-primary") }}
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+
+	<script type="text/javascript" src="{{ url_for('static', filename='js/add_employee.js') }}"></script>
+{% endblock %}
