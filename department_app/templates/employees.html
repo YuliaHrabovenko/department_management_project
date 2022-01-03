@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Employees{% endblock %}
+{% block content %}
+<div class="container mt-4">
+		<h2 class="text-center mb-4">Employees List</h2>
+
+		<form>
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group" id="dateForm">
+                    <div class="form-group">
+                        {{ form.start_date.label(class="form-control-label")}}
+                        {% if form.start_date.errors %}
+                            {{ form.start_date(class="form-control form-control-md is-invalid col-md-3") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.start_date.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.start_date(class="form-control form-control-md col-md-3", id="start-date") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.end_date.label(class="form-control-label")}}
+                        {% if form.end_date.errors %}
+                            {{ form.end_date(class="form-control form-control-md is-invalid col-md-3") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.end_date.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.end_date(class="form-control form-control-md col-md-3", id="end-date") }}
+                        {% endif %}
+                    </div>
+                    <div>
+                        {{ form.check_box(id="check-box") }}
+                        {{ form.check_box.label(class="form-control-label")}}
+                    </div>
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-primary btn-md", id="submit-btn") }}
+                    </div>
+                </fieldset>
+        </form>
+
+        <div class="table-responsive" id="emp-table">
+            <table class="table table-striped" id="employee-table">
+                <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Name</th>
+					<th scope="col">Date of birth</th>
+					<th scope="col">Age</th>
+					<th scope="col">Department</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            </div>
+            <div class="d-flex justify-content-start mt-3" style="position: relative; transition: .5s ease;">
+                <a href="{{url_for('views_bp.add_employee')}}" class="btn btn-success btn-md align-self-center"><i class="bi bi-plus-circle"></i> New Employee</a>
+            </div>
+        </div>
+
+        <div class="modal" id="delModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Delete</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this employee?</p>
+                        <strong><p id="emp-name"></p></strong>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" id="delete">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block javascript %}
+
+	<script type="text/javascript" src="{{ url_for('static', filename='js/employees.js') }}"></script>
+{% endblock %}
+
+
