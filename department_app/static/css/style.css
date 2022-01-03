@@ -1,0 +1,71 @@
+body{
+    height: 100%;
+}
+nav{
+    position: fixed;
+    top: 0;
+}
+@media only screen and (max-width:995px){
+    td #empl, #employee-table td{
+        overflow: auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width:1200px){
+    td #dep, #department-table td{
+        overflow: auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+table{
+    counter-reset: my-sec-counter;
+}
+
+tbody tr th::before {
+  /* Increment "my-sec-counter" by 1 */
+  counter-increment: my-sec-counter;
+  content: counter(my-sec-counter);
+}
+
+.hero-image {
+  background-image: url("../images/department.jpg");
+  background-color: #cccccc;
+  min-width: 100%;
+  min-height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+}
+.hero-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.footer-text{
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+}
+.image-text{
+    text-align: center;
+    top: 35%;
+    left: 50%;
+}
+
+footer{
+    min-width: 100%;
+    min-height: 30%;
+    position: fixed;
+    bottom: 0;
+    background-color: #dedede;
+}
+
+.form-control{
+    font-size: 18px;
+}
