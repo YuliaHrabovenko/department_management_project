@@ -3,3 +3,14 @@ __pycache__/
 
 # Environments
 venv/
+.env
+.idea/
+
+# Sphinx
+_static
+_templates
+make.bat
+Makefile
+
+# Coverage
+.coverage

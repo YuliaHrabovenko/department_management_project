@@ -50,13 +50,13 @@ def register_api_and_blueprint(app):
     api.add_resource(Employee, '/api/employee/<uuid>')
 
 
-def create_database_if_not_exists(app, db, database_url):
+def create_database_if_not_exists(app, database, database_url):
     """
     Create database if it does not exist
     :param app: app instance
-    :param db: db instance
+    :param database: database instance
     :param database_url: database url
     """
     if not database_exists(database_url):
         with app.app_context():
-            db.create_all()
+            database.create_all()

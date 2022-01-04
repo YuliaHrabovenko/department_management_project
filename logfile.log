@@ -6,7 +6,14 @@
 2022-01-03 00:06:05,683 - INFO - Failed to edit employee: only whitespaces in employee name.
 2022-01-03 00:06:31,967 - INFO - Succeeded to edit employee with name "Jennifer Bales", birth_date: "2002-03-08 00:00:00", salary: "1300" and department: "R&D"
 2022-01-03 00:07:11,405 - INFO - Search by period between dates: from "1990-02-15 00:00:00" to "2022-01-03 00:00:00"
-2022-01-03 00:07:13,730 - INFO - Search by period between dates: from "1990-02-15 00:00:00" to "2022-01-03 00:00:00"
 2022-01-03 00:07:28,670 - INFO - Search by period between dates: from "2000-06-01 00:00:00" to "2022-01-03 00:00:00"
 2022-01-03 00:08:06,555 - INFO - Search by exact date: "1997-07-10 00:00:00"
 2022-01-03 00:12:12,808 - INFO - Failed to add a new department: department with name Management already exists
+2022-01-03 21:25:22,060 - INFO - Failed to delete department with fake uuid: fake_uuid
+2022-01-04 00:34:56,650 - INFO - Succeeded to edit employee with name "Jennifer Bales", birth_date: "2002-03-09 00:00:00", salary: "1300" and department: "R&D"
+2022-01-04 00:36:34,976 - INFO - Failed to delete department with fake uuid: fake_uuid
+2022-01-04 00:36:35,061 - INFO - Succeeded to delete department with name: "Finance"
+2022-01-04 00:36:35,454 - INFO - Succeeded to add department: name "Finance", description "Some finance department."
+2022-01-04 00:36:36,862 - INFO - Failed to delete employee with fake uuid: fake_uuid
+2022-01-04 00:36:36,925 - INFO - Succeeded to delete employee with name: "Joe Travis"
+2022-01-04 00:36:37,418 - INFO - Succeeded to add employee with name "Joe Travis"

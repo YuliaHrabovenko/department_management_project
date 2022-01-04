@@ -6,7 +6,7 @@ defines the following class:
 from typing import List
 from sqlalchemy import and_
 
-from department_app.extensions import db, logger
+from department_app.extensions import db
 from department_app.models.employee import EmployeeModel
 
 
@@ -21,10 +21,7 @@ class EmployeeService:
         :param uuid: employee`s uuid
         :return: employee with given uuid
         """
-        try:
-            return db.session.query(EmployeeModel).filter_by(uuid=uuid).first()
-        except:
-            logger.warning('Employee search by uuid in the db failed.')
+        return db.session.query(EmployeeModel).filter_by(uuid=uuid).first()
 
     @classmethod
     def find_all(cls) -> List[EmployeeModel]:
@@ -32,10 +29,7 @@ class EmployeeService:
         Fetches all the employees from the database.
         :return: list of all the employees
         """
-        try:
-            return db.session.query(EmployeeModel).all()
-        except:
-            logger.warning('List of employees search in the db failed.')
+        return db.session.query(EmployeeModel).all()
 
     @classmethod
     def save_to_db(cls, employee_object):
@@ -43,11 +37,8 @@ class EmployeeService:
         Saves provided employee in the database.
         :param employee_object: given employee
         """
-        try:
-            db.session.add(employee_object)
-            db.session.commit()
-        except:
-            logger.warning('Saving employee in the db failed.')
+        db.session.add(employee_object)
+        db.session.commit()
 
     @classmethod
     def delete_from_db(cls, employee_object):
@@ -55,21 +46,15 @@ class EmployeeService:
         Deletes provided employee from database.
         :param employee_object: given employee
         """
-        try:
-            db.session.delete(employee_object)
-            db.session.commit()
-        except:
-            logger.warning('Deleting employee from the db failed.')
+        db.session.delete(employee_object)
+        db.session.commit()
 
     @classmethod
     def update_in_db(cls):
         """
         Updates given employee in the database and saves changes.
         """
-        try:
-            db.session.commit()
-        except:
-            logger.warning('Updating employee in the db failed.')
+        db.session.commit()
 
     @classmethod
     def find_by_birth_date(cls, date) -> List[EmployeeModel]:
@@ -78,11 +63,8 @@ class EmployeeService:
         :param date: given date of birth
         :return: list of found employees
         """
-        try:
-            employees = db.session.query(EmployeeModel).filter_by(birth_date=date).all()
-            return employees
-        except:
-            logger.warning('Employee search by exact date in the db failed.')
+        employees = db.session.query(EmployeeModel).filter_by(birth_date=date).all()
+        return employees
 
     @classmethod
     def find_by_birth_period(cls, start_date, end_date) -> List[EmployeeModel]:
@@ -92,13 +74,10 @@ class EmployeeService:
         :param end_date: end date of birth
         :return: list of found employees
         """
-        try:
-            employees = db.session.query(
-                EmployeeModel).filter(
-                and_(EmployeeModel.birth_date > start_date,
-                     EmployeeModel.birth_date < end_date
-                     )
-            ).all()
-            return employees
-        except:
-            logger.warning('Employee search in the period between dates in the db failed.')
+        employees = db.session.query(
+            EmployeeModel).filter(
+            and_(EmployeeModel.birth_date > start_date,
+                 EmployeeModel.birth_date < end_date
+                 )
+        ).all()
+        return employees
