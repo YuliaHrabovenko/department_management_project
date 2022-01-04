@@ -13,7 +13,7 @@ const renderEmployees = (employees) => {
                 <td class="birth_date">${employee.birth_date}</td>
                 <td class="age">${employee.age} y.o</td>
                 <td class="department">${employee.department}</td>
-                <td class="salary">${employee.salary}</td>
+                <td class="salary">${employee.salary}$</td>
                 <td class="col-md-2">
                     <div id=${employee.uuid} class='${employee.name}'>
                         <a href="/edit_employee/${employee.uuid}" onclick="redirectToEditPage();" class="btn btn-primary btn-sm align-self-center" id="edit-emp">Edit</a> |
