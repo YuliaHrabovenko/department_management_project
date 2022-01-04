@@ -54,7 +54,12 @@ disable=raw-checker-failed,
         suppressed-message,
         useless-suppression,
         deprecated-pragma,
-        use-symbolic-message-instead
+        use-symbolic-message-instead,
+        logging-fstring-interpolation,
+        cyclic-import,
+        duplicate-code,
+        wrong-import-position,
+        dangerous-default-value
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
