@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>department_app.rest package &mdash; Department App  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="department_app.schemas package" href="department_app.schemas.html" />
+    <link rel="prev" title="department_app.models package" href="department_app.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Department App
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">final_epam_project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="app.html">app module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="department_app.html">department_app package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="department_app.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="department_app.forms.html">department_app.forms package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.models.html">department_app.models package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">department_app.rest package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.schemas.html">department_app.schemas package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.service.html">department_app.service package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.tests.html">department_app.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.views.html">department_app.views package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="department_app.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="department_app.html#module-department_app.extensions">department_app.extensions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="department_app.html#module-department_app">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Department App</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">final_epam_project</a> &raquo;</li>
+          <li><a href="department_app.html">department_app package</a> &raquo;</li>
+      <li>department_app.rest package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/department_app.rest.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="department-app-rest-package">
+<h1>department_app.rest package<a class="headerlink" href="#department-app-rest-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-department_app.rest.department">
+<span id="department-app-rest-department-module"></span><h2>department_app.rest.department module<a class="headerlink" href="#module-department_app.rest.department" title="Permalink to this headline"></a></h2>
+<p>Departments REST API, this module defines the following classes:
+- Department which is department API class
+- DepartmentList which is department list API class</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="department_app.rest.department.Department">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">department_app.rest.department.</span></span><span class="sig-name descname"><span class="pre">Department</span></span><a class="headerlink" href="#department_app.rest.department.Department" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_restful.Resource</span></code></p>
+<p>Department API class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.department.Department.delete">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.department.Department.delete" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes a department by its uuid in case department with such an uuid was found and
+returns 204 status code. Returns an error message with status code 204 when department
+with such uuid does not exist.
+:param uuid: department uuid
+:return: no content message and a status code 204 or an error message with a status code 404</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.department.Department.endpoint">
+<span class="sig-name descname"><span class="pre">endpoint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'department'</span></em><a class="headerlink" href="#department_app.rest.department.Department.endpoint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.department.Department.get">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.department.Department.get" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches a department by uuid via a service and returns it in json format with a status
+code 200 when success or an error message in json with a 404 status code if department
+with such an uuid has not been found.
+:param uuid: department uuid
+:return: json representation of the department and a status code 200 or an error
+message and a status code 404</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.department.Department.mediatypes">
+<span class="sig-name descname"><span class="pre">mediatypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.department.Department.mediatypes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.department.Department.methods">
+<span class="sig-name descname"><span class="pre">methods</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'DELETE',</span> <span class="pre">'GET',</span> <span class="pre">'PUT'}</span></em><a class="headerlink" href="#department_app.rest.department.Department.methods" title="Permalink to this definition"></a></dt>
+<dd><p>A list of methods this view can handle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.department.Department.put">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.department.Department.put" title="Permalink to this definition"></a></dt>
+<dd><p>Updates a department by its uuid in case such a department has been found and returns
+it in json format with status code 200. Returns an error message with status code
+400 when request data does not pass validation or a department input name is empty.
+:param uuid: department uuid
+:return: json representation of the department and a status code 200 or an error
+message and a status code 400</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="department_app.rest.department.DepartmentList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">department_app.rest.department.</span></span><span class="sig-name descname"><span class="pre">DepartmentList</span></span><a class="headerlink" href="#department_app.rest.department.DepartmentList" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_restful.Resource</span></code></p>
+<p>Department list API class</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.department.DepartmentList.endpoint">
+<span class="sig-name descname"><span class="pre">endpoint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'departmentlist'</span></em><a class="headerlink" href="#department_app.rest.department.DepartmentList.endpoint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.department.DepartmentList.get">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.department.DepartmentList.get" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Fetches a list of all departments via a service and returns them in the list of
+json format data items with status code 200 or en empty list in case no departments
+have been found.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of departments in json format and status code 200</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.department.DepartmentList.mediatypes">
+<span class="sig-name descname"><span class="pre">mediatypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.department.DepartmentList.mediatypes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.department.DepartmentList.methods">
+<span class="sig-name descname"><span class="pre">methods</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'GET',</span> <span class="pre">'POST'}</span></em><a class="headerlink" href="#department_app.rest.department.DepartmentList.methods" title="Permalink to this definition"></a></dt>
+<dd><p>A list of methods this view can handle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.department.DepartmentList.post">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.department.DepartmentList.post" title="Permalink to this definition"></a></dt>
+<dd><p>Creates new department and returns its json representation with a status code 200.
+Returns an error message with a status code 400 in case request data does not pass
+validation or an input department name is empty.
+:return: json representation of the department and a status code 201 or an error
+message and a status code 400</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-department_app.rest.employee">
+<span id="department-app-rest-employee-module"></span><h2>department_app.rest.employee module<a class="headerlink" href="#module-department_app.rest.employee" title="Permalink to this headline"></a></h2>
+<p>Employees REST API, this module defines the following classes:
+- Employee which is employee API class
+- EmployeeList which is employee list API class
+- EmployeeSearchList which is employee search API class</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="department_app.rest.employee.Employee">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">department_app.rest.employee.</span></span><span class="sig-name descname"><span class="pre">Employee</span></span><a class="headerlink" href="#department_app.rest.employee.Employee" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_restful.Resource</span></code></p>
+<p>Employee API class</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.employee.Employee.delete">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.employee.Employee.delete" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes an employee by its uuid in case employee with such an uuid has been found and
+returns 204 status code. Returns an error message with status code 204 when employee
+with such uuid does not exist.
+:param uuid: employee uuid
+:return: no content message and a status code 204 or an error message with a status code 404</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.employee.Employee.endpoint">
+<span class="sig-name descname"><span class="pre">endpoint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'employee'</span></em><a class="headerlink" href="#department_app.rest.employee.Employee.endpoint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.employee.Employee.get">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.employee.Employee.get" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches an employee by uuid via a service and returns it in json format with a status
+code 200 when success or an error message in json with a 404 status code if employee
+with such an uuid has not been found.
+:param uuid: employee uuid
+:return: json representation of the employee and a status code 200 or an error
+message and a status code 404</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.employee.Employee.mediatypes">
+<span class="sig-name descname"><span class="pre">mediatypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.employee.Employee.mediatypes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.employee.Employee.methods">
+<span class="sig-name descname"><span class="pre">methods</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'DELETE',</span> <span class="pre">'GET',</span> <span class="pre">'PUT'}</span></em><a class="headerlink" href="#department_app.rest.employee.Employee.methods" title="Permalink to this definition"></a></dt>
+<dd><p>A list of methods this view can handle.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.employee.Employee.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;flask_restful.reqparse.RequestParser</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#department_app.rest.employee.Employee.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.employee.Employee.put">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.employee.Employee.put" title="Permalink to this definition"></a></dt>
+<dd><p>Updates a employee by its uuid in case such an employee has been found and returns
+it in json format with status code 200. Returns an error message with status code
+400 when request data does not pass validation or an employee input name is empty.
+:param uuid: employee uuid
+:return: json representation of the employee and a status code 200 or an error
+message and a status code 400</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">department_app.rest.employee.</span></span><span class="sig-name descname"><span class="pre">EmployeeList</span></span><a class="headerlink" href="#department_app.rest.employee.EmployeeList" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_restful.Resource</span></code></p>
+<p>Employee list API class</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeList.endpoint">
+<span class="sig-name descname"><span class="pre">endpoint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'employeelist'</span></em><a class="headerlink" href="#department_app.rest.employee.EmployeeList.endpoint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeList.get">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.employee.EmployeeList.get" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Fetches all the employees via a service and returns them in the list of
+json format data items with status code 200 or en empty list in case no employees
+have been found.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of employees in json format and status code 200</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeList.mediatypes">
+<span class="sig-name descname"><span class="pre">mediatypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.employee.EmployeeList.mediatypes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeList.methods">
+<span class="sig-name descname"><span class="pre">methods</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'GET',</span> <span class="pre">'POST'}</span></em><a class="headerlink" href="#department_app.rest.employee.EmployeeList.methods" title="Permalink to this definition"></a></dt>
+<dd><p>A list of methods this view can handle.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeList.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;flask_restful.reqparse.RequestParser</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#department_app.rest.employee.EmployeeList.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeList.post">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.employee.EmployeeList.post" title="Permalink to this definition"></a></dt>
+<dd><p>Creates new employee and returns its json representation with a status code 200.
+Returns an error message with a status code 400 in case request data does not pass
+validation or an input employee name is empty.
+:return: json representation of the employee and a status code 201 or an error
+message and a status code 400</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeSearchList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">department_app.rest.employee.</span></span><span class="sig-name descname"><span class="pre">EmployeeSearchList</span></span><a class="headerlink" href="#department_app.rest.employee.EmployeeSearchList" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_restful.Resource</span></code></p>
+<p>Employee search API class</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeSearchList.endpoint">
+<span class="sig-name descname"><span class="pre">endpoint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'employeesearchlist'</span></em><a class="headerlink" href="#department_app.rest.employee.EmployeeSearchList.endpoint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeSearchList.get">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.employee.EmployeeSearchList.get" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Fetches all the employees born in a specific date via a service and returns them
+in the list of json format data items with status code 200. Or fetches all the
+employees born in a given period via a service and returns them in the list of json
+format data with status code 200.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of employees in json format and status code 200</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeSearchList.mediatypes">
+<span class="sig-name descname"><span class="pre">mediatypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.rest.employee.EmployeeSearchList.mediatypes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeSearchList.methods">
+<span class="sig-name descname"><span class="pre">methods</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'GET'}</span></em><a class="headerlink" href="#department_app.rest.employee.EmployeeSearchList.methods" title="Permalink to this definition"></a></dt>
+<dd><p>A list of methods this view can handle.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="department_app.rest.employee.EmployeeSearchList.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;flask_restful.reqparse.RequestParser</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#department_app.rest.employee.EmployeeSearchList.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-department_app.rest">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-department_app.rest" title="Permalink to this headline"></a></h2>
+<p>Module __init__.py.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="department_app.models.html" class="btn btn-neutral float-left" title="department_app.models package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="department_app.schemas.html" class="btn btn-neutral float-right" title="department_app.schemas package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Yuliia Hrabovenko.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

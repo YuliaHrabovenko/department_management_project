@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>department_app.service package &mdash; Department App  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="department_app.tests package" href="department_app.tests.html" />
+    <link rel="prev" title="department_app.schemas package" href="department_app.schemas.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Department App
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">final_epam_project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="app.html">app module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="department_app.html">department_app package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="department_app.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="department_app.forms.html">department_app.forms package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.models.html">department_app.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.rest.html">department_app.rest package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.schemas.html">department_app.schemas package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">department_app.service package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.tests.html">department_app.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="department_app.views.html">department_app.views package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="department_app.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="department_app.html#module-department_app.extensions">department_app.extensions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="department_app.html#module-department_app">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Department App</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">final_epam_project</a> &raquo;</li>
+          <li><a href="department_app.html">department_app package</a> &raquo;</li>
+      <li>department_app.service package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/department_app.service.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="department-app-service-package">
+<h1>department_app.service package<a class="headerlink" href="#department-app-service-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-department_app.service.department">
+<span id="department-app-service-department-module"></span><h2>department_app.service.department module<a class="headerlink" href="#module-department_app.service.department" title="Permalink to this headline"></a></h2>
+<p>Department service module used to realize interaction with database, this module
+defines the following class:
+- DepartmentService which is a department serialization and deserialization schema</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">department_app.service.department.</span></span><span class="sig-name descname"><span class="pre">DepartmentService</span></span><a class="headerlink" href="#department_app.service.department.DepartmentService" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Department service used to make database queries.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService.delete_from_db">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_from_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">department_object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.department.DepartmentService.delete_from_db" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes provided department from database.
+:param department_object: given department</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService.find_all">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="department_app.models.html#department_app.models.department.DepartmentModel" title="department_app.models.department.DepartmentModel"><span class="pre">department_app.models.department.DepartmentModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#department_app.service.department.DepartmentService.find_all" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches all the departments from database.
+:return: list of all the departments</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService.find_by_name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.department.DepartmentService.find_by_name" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches the department by given name from database.
+:param uuid: department`s name
+:return: department with given name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService.find_by_uuid">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_by_uuid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.department.DepartmentService.find_by_uuid" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches the department by given uuid from database.
+:param uuid: department`s uuid
+:return: department with given uuid</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService.find_employees_average_age">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_employees_average_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">department_object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.department.DepartmentService.find_employees_average_age" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates average age of employees working in
+the given department.
+:param department_object: provided department
+:return: employee`s average age value</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService.find_employees_average_salary">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_employees_average_salary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">department_object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.department.DepartmentService.find_employees_average_salary" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates average salary of employees working in
+the given department.
+:param department_object: given department
+:return: an average salary value</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService.find_employees_count">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_employees_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">department_object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.department.DepartmentService.find_employees_count" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the number of employees in the department.
+:param department_object: given department
+:return: amount of the employees</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService.save_to_db">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save_to_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">department_object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.department.DepartmentService.save_to_db" title="Permalink to this definition"></a></dt>
+<dd><p>Saves provided department in database.
+:param department_object: given department</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.department.DepartmentService.update_in_db">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_in_db</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.department.DepartmentService.update_in_db" title="Permalink to this definition"></a></dt>
+<dd><p>Updates given department in the database and
+saves changes.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-department_app.service.employee">
+<span id="department-app-service-employee-module"></span><h2>department_app.service.employee module<a class="headerlink" href="#module-department_app.service.employee" title="Permalink to this headline"></a></h2>
+<p>Employee service module used to realize interaction with database, this module
+defines the following class:
+- EmployeeService which is an employee serialization and deserialization schema</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="department_app.service.employee.EmployeeService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">department_app.service.employee.</span></span><span class="sig-name descname"><span class="pre">EmployeeService</span></span><a class="headerlink" href="#department_app.service.employee.EmployeeService" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Employee service used to make database queries.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.employee.EmployeeService.delete_from_db">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_from_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">employee_object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.employee.EmployeeService.delete_from_db" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes provided employee from database.
+:param employee_object: given employee</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.employee.EmployeeService.find_all">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="department_app.models.html#department_app.models.employee.EmployeeModel" title="department_app.models.employee.EmployeeModel"><span class="pre">department_app.models.employee.EmployeeModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#department_app.service.employee.EmployeeService.find_all" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches all the employees from the database.
+:return: list of all the employees</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.employee.EmployeeService.find_by_birth_date">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_by_birth_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="department_app.models.html#department_app.models.employee.EmployeeModel" title="department_app.models.employee.EmployeeModel"><span class="pre">department_app.models.employee.EmployeeModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#department_app.service.employee.EmployeeService.find_by_birth_date" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all the employees born on a specific date.
+:param date: given date of birth
+:return: list of found employees</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.employee.EmployeeService.find_by_birth_period">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_by_birth_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="department_app.models.html#department_app.models.employee.EmployeeModel" title="department_app.models.employee.EmployeeModel"><span class="pre">department_app.models.employee.EmployeeModel</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#department_app.service.employee.EmployeeService.find_by_birth_period" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all the employees born in a period between dates.
+:param start_date: start date of birth
+:param end_date: end date of birth
+:return: list of found employees</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.employee.EmployeeService.find_by_uuid">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_by_uuid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.employee.EmployeeService.find_by_uuid" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches an employee by given uuid from the database.
+:param uuid: employee`s uuid
+:return: employee with given uuid</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.employee.EmployeeService.save_to_db">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save_to_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">employee_object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.employee.EmployeeService.save_to_db" title="Permalink to this definition"></a></dt>
+<dd><p>Saves provided employee in the database.
+:param employee_object: given employee</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="department_app.service.employee.EmployeeService.update_in_db">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_in_db</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#department_app.service.employee.EmployeeService.update_in_db" title="Permalink to this definition"></a></dt>
+<dd><p>Updates given employee in the database and saves changes.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-department_app.service">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-department_app.service" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="department_app.schemas.html" class="btn btn-neutral float-left" title="department_app.schemas package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="department_app.tests.html" class="btn btn-neutral float-right" title="department_app.tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Yuliia Hrabovenko.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
