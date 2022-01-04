@@ -29,7 +29,6 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
     db.init_app(app)
-    create_database_if_not_exists(app, db, app.config['SQLALCHEMY_DATABASE_URI'])
     migrate.init_app(app, db, directory=MIGRATION_DIRECTORY)
     register_api_and_blueprint(app)
     api.init_app(app)
@@ -48,15 +47,3 @@ def register_api_and_blueprint(app):
     api.add_resource(EmployeeList, '/api/employees')
     api.add_resource(EmployeeSearchList, '/api/employees/search')
     api.add_resource(Employee, '/api/employee/<uuid>')
-
-
-def create_database_if_not_exists(app, database, database_url):
-    """
-    Create database if it does not exist
-    :param app: app instance
-    :param database: database instance
-    :param database_url: database url
-    """
-    if not database_exists(database_url):
-        with app.app_context():
-            database.create_all()

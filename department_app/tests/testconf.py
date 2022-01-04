@@ -23,6 +23,7 @@ class BaseTestCase(unittest.TestCase):
         db.init_app(self.app)
         self.app.app_context().push()
         db.create_all()
+        print(self.app.config["SQLALCHEMY_DATABASE_URI"])
         # self.app.testing = True
         # self.client = self.app.test_client()
 
