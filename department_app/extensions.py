@@ -22,8 +22,8 @@ def get_logger():
     debugging level in the console and in a separate file.
     :return: logger object
     """
-    werkzeug_logger = logging.getLogger('werkzeug')
-    werkzeug_logger.setLevel(logging.ERROR)
+    # werkzeug_logger = logging.getLogger('werkzeug')
+    # werkzeug_logger.setLevel(logging.ERROR)
     # Create logger
     application_logger = logging.getLogger()
     application_logger.setLevel(logging.DEBUG)
