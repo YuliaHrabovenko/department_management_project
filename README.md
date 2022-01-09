@@ -45,7 +45,6 @@ CREATE DATABASE [your_database_name];
 ```
 7. Create .env file in the project directory and set the following environment variables:
 ```
-SECRET_KEY="your_secret_key"
 MYSQL_USER="your_mysql_user"
 MYSQL_PASSWORD="your_mysql_password"
 MYSQL_SERVER="localhost"
