@@ -62,3 +62,9 @@
 2022-01-05 03:12:32,995 - INFO - Succeeded to edit employee with name "Bob Parker" 
 2022-01-05 03:14:39,249 - INFO - Succeeded to add employee with name "Sam Lous", birth_date: "2000-08-08 00:00:00", salary: "2000" and department: "R&D"
 2022-01-05 03:15:02,376 - INFO - Succeeded to delete employee with name: "Sam Lous"
+2022-01-10 00:01:12,562 - INFO - Failed to delete department with fake uuid: fake_uuid
+2022-01-10 00:01:12,622 - INFO - Succeeded to delete department with name: "Finance"
+2022-01-10 00:01:12,896 - INFO - Succeeded to add department: name "Finance", description "Some finance department."
+2022-01-10 00:01:14,070 - INFO - Failed to delete employee with fake uuid: fake_uuid
+2022-01-10 00:01:14,123 - INFO - Succeeded to delete employee with name: "Joe Travis"
+2022-01-10 00:01:14,514 - INFO - Succeeded to add employee with name "Joe Travis"
