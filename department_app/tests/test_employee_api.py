@@ -111,7 +111,7 @@ class TestEmployeeApi(BaseTestCase):
         self.employee_1.department = department
         mock_get.return_value = self.employee_1
         expected_value = emp_to_json(self.employee_1)
-        response = self.client.get(f'/api/employee/{self.employee_1.uuid}')
+        response = self.client.get(f'/api/employees/{self.employee_1.uuid}')
         mock_get.assert_called_once_with(self.employee_1.uuid)
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertEqual(response.json, expected_value)
@@ -125,7 +125,7 @@ class TestEmployeeApi(BaseTestCase):
         """
         uuid = 'unknown uuid'
         mock_get.side_effect = NotFound('Employee not found error')
-        response = self.client.get(f'/api/employee/{uuid}')
+        response = self.client.get(f'/api/employees/{uuid}')
         mock_get.assert_called_once()
         self.assertEqual(response.json, {'message': 'Employee not found error'})
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
@@ -144,7 +144,7 @@ class TestEmployeeApi(BaseTestCase):
         mock_put.return_value = expected_value
         data = {'name': self.employee_1.name, "salary": self.employee_1.salary,
                 "birth_date": self.employee_1.birth_date.strftime('%Y-%m-%d')}
-        response = self.client.put(f'/api/employee/{self.employee_1.uuid}', data=json.dumps(data),
+        response = self.client.put(f'/api/employees/{self.employee_1.uuid}', data=json.dumps(data),
                                    content_type='application/json')
         mock_put.assert_called_once()
         self.assertEqual(response.status_code, HTTPStatus.OK)
@@ -163,7 +163,7 @@ class TestEmployeeApi(BaseTestCase):
         self.employee_1.name = '   '
         data = {'name': self.employee_1.name, "salary": self.employee_1.salary,
                 "birth_date": self.employee_1.birth_date.strftime('%Y-%m-%d')}
-        response = self.client.put(f'/api/employee/{self.employee_1.uuid}', data=json.dumps(data),
+        response = self.client.put(f'/api/employees/{self.employee_1.uuid}', data=json.dumps(data),
                                    content_type='application/json')
         mock_put.assert_called_once()
         self.assertEqual(response.status_code, HTTPStatus.BAD_REQUEST)
@@ -182,7 +182,7 @@ class TestEmployeeApi(BaseTestCase):
             db.session.add(self.employee_1)
             db.session.commit()
             data = {'name': self.employee_1.name}
-            response = self.client.put(f'/api/employee/{self.employee_1.uuid}',
+            response = self.client.put(f'/api/employees/{self.employee_1.uuid}',
                                        data=json.dumps(data),
                                        content_type='application/json')
             self.assertEqual(response.status_code, HTTPStatus.BAD_REQUEST)
@@ -199,7 +199,7 @@ class TestEmployeeApi(BaseTestCase):
         db.session.commit()
         uuid = self.employee_1.uuid
         mock_delete.return_value = ''
-        response = self.client.delete(f'/api/employee/{uuid}')
+        response = self.client.delete(f'/api/employees/{uuid}')
         mock_delete.assert_called_once()
         self.assertEqual(response.status_code, HTTPStatus.NO_CONTENT)
         self.assertEqual(
@@ -215,7 +215,7 @@ class TestEmployeeApi(BaseTestCase):
         """
         mock_delete.side_effect = NotFound("Employee not found error")
         uuid = 'fake_uuid'
-        response = self.client.delete(f'/api/employee/{uuid}')
+        response = self.client.delete(f'/api/employees/{uuid}')
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
         self.assertEqual(response.json, {'message': 'Employee not found error'})
 

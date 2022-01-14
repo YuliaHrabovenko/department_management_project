@@ -130,7 +130,7 @@ class TestDepartmentApi(BaseTestCase):
         department.employees = [EmployeeModel('John Williams', date(1996, 5, 12), 2000)]
         mock_get.return_value = department
         expected_value = dep_to_json(department)
-        response = self.client.get(f'/api/department/{department.uuid}')
+        response = self.client.get(f'/api/departments/{department.uuid}')
         mock_get.assert_called_once_with(department.uuid)
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertEqual(response.json, expected_value)
@@ -144,7 +144,7 @@ class TestDepartmentApi(BaseTestCase):
         """
         uuid = 'unknown uuid'
         mock_get.side_effect = NotFound('Department not found error')
-        response = self.client.get(f'/api/department/{uuid}')
+        response = self.client.get(f'/api/departments/{uuid}')
         self.assertEqual(response.json, {'message': 'Department not found error'})
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
 
@@ -163,7 +163,7 @@ class TestDepartmentApi(BaseTestCase):
         data = {'name': self.department1.name,
                 'description': self.department1.description
                 }
-        response = self.client.put(f'/api/department/{self.department1.uuid}',
+        response = self.client.put(f'/api/departments/{self.department1.uuid}',
                                    data=json.dumps(data),
                                    content_type='application/json')
         self.assertEqual(response.status_code, HTTPStatus.OK)
@@ -182,7 +182,7 @@ class TestDepartmentApi(BaseTestCase):
         # db.session.commit()
         self.department1.name = '   '
         data = {'name': self.department1.name, 'description': self.department1.description}
-        response = self.client.put(f'/api/department/{self.department1.uuid}',
+        response = self.client.put(f'/api/departments/{self.department1.uuid}',
                                    data=json.dumps(data),
                                    content_type='application/json')
         self.assertEqual(response.status_code, HTTPStatus.BAD_REQUEST)
@@ -202,7 +202,7 @@ class TestDepartmentApi(BaseTestCase):
             # db.session.add(self.department1)
             # db.session.commit()
             data = {'description': self.department1.description}
-            response = self.client.put(f'/api/department/{self.department1.uuid}',
+            response = self.client.put(f'/api/departments/{self.department1.uuid}',
                                        data=json.dumps(data),
                                        content_type='application/json')
             self.assertEqual(response.status_code, HTTPStatus.BAD_REQUEST)
@@ -219,7 +219,7 @@ class TestDepartmentApi(BaseTestCase):
         db.session.commit()
         uuid = self.department1.uuid
         mock_delete.return_value = ''
-        response = self.client.delete(f'/api/department/{uuid}')
+        response = self.client.delete(f'/api/departments/{uuid}')
         mock_delete.assert_called_once()
         self.assertEqual(response.status_code, HTTPStatus.NO_CONTENT)
         self.assertEqual(
@@ -235,6 +235,6 @@ class TestDepartmentApi(BaseTestCase):
         """
         mock_delete.side_effect = NotFound("Department not found error")
         uuid = 'fake_uuid'
-        response = self.client.delete(f'/api/department/{uuid}')
+        response = self.client.delete(f'/api/departments/{uuid}')
         self.assertEqual(response.status_code, HTTPStatus.NOT_FOUND)
         self.assertEqual(response.json, {'message': 'Department not found error'})

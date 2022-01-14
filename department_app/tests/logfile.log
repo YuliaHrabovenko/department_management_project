@@ -17,3 +17,14 @@
 2022-01-04 21:35:54,779 - INFO - Failed to delete department with fake uuid: fake_uuid
 2022-01-04 21:35:54,838 - INFO - Succeeded to delete department with name: "Finance"
 2022-01-04 21:35:55,078 - INFO - Succeeded to add department: name "Finance", description "Some finance department."
+2022-01-14 21:43:33,242 - INFO - Succeeded to add department: name "Finance", description "Some finance department."
+2022-01-14 21:44:07,461 - INFO - Failed to delete department with fake uuid: fake_uuid
+2022-01-14 21:44:07,506 - INFO - Succeeded to delete department with name: "Finance"
+2022-01-14 21:44:07,725 - INFO - Succeeded to add department: name "Finance", description "Some finance department."
+2022-01-14 21:44:42,909 - INFO - Succeeded to add employee with name "Joe Travis"
+2022-01-14 21:45:30,687 - INFO - Failed to delete employee with fake uuid: fake_uuid
+2022-01-14 21:45:30,735 - INFO - Succeeded to delete employee with name: "Joe Travis"
+2022-01-14 21:45:31,131 - INFO - Succeeded to add employee with name "Joe Travis"
+2022-01-14 21:46:14,457 - INFO - Failed to delete department with fake uuid: fake_uuid
+2022-01-14 21:46:14,505 - INFO - Succeeded to delete department with name: "Finance"
+2022-01-14 21:46:14,796 - INFO - Succeeded to add department: name "Finance", description "Some finance department."
