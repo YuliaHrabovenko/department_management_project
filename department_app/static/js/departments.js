@@ -54,7 +54,7 @@ async function deleteDepartment() {
             modal.addEventListener('click', (e) => {
                 let submitModalBtn = e.target.id == 'delete';
                 async function fetchDelete(){
-                    const response = await fetch(`${'/api/department'}/${id}`, {
+                    const response = await fetch(`${'/api/departments'}/${id}`, {
                         method: 'DELETE',
                         });
                     if (!response.ok) {

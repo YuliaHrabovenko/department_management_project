@@ -61,7 +61,7 @@ async function handleFormSubmit(event) {
      */
     let uuid = location.href.split("/").slice(-1)[0];
     var department_uuid = document.getElementById('department').value;
-    const url = "/api/employee/" + `${uuid}?department_uuid=${department_uuid}`;
+    const url = "/api/employees/" + `${uuid}?department_uuid=${department_uuid}`;
 
     try {
         const responseData = await putFormDataAsJson({ url, formData });
@@ -82,7 +82,7 @@ editEmployeeForm.addEventListener("submit", handleFormSubmit);
  * This holds the API URL.
  */
 let uuid = location.href.split("/").slice(-1)[0];
-const url = "/api/employee/" + `${uuid}`;
+const url = "/api/employees/" + `${uuid}`;
 fetch(url)
     .then((response) => {
         return response.json();
