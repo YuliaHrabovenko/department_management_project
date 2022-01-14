@@ -94,7 +94,7 @@ async function deleteEmployee() {
             modal.addEventListener('click', (e) => {
                 let submitModalBtn = e.target.id == 'delete';
                 async function fetchDelete(){
-                    const response = await fetch(`${'/api/employee'}/${id}`, {
+                    const response = await fetch(`${'/api/employees'}/${id}`, {
                         method: 'DELETE',
                         });
                     if (!response.ok) {

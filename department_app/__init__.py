@@ -44,8 +44,8 @@ def register_api_and_blueprint(app):
     app.register_blueprint(views_bp)
     api.app = app
     api.add_resource(DepartmentList, '/api/departments')
-    api.add_resource(Department, '/api/department/<uuid>')
+    api.add_resource(Department, '/api/departments/<uuid>')
 
     api.add_resource(EmployeeList, '/api/employees')
     api.add_resource(EmployeeSearchList, '/api/employees/search')
-    api.add_resource(Employee, '/api/employee/<uuid>')
+    api.add_resource(Employee, '/api/employees/<uuid>')

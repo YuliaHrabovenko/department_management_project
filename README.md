@@ -60,15 +60,15 @@ export FLASK_APP=app
 flask run
 ```
 ## Now you should have access to the web service and web application:
-* ### Web Service addresses
+### Web Service addresses
 ```
 http://127.0.0.1:5000/api/departments
-http://127.0.0.1:5000/api/department/<uuid>
+http://127.0.0.1:5000/api/departments/<uuid>
 http://127.0.0.1:5000/api/employees
-http://127.0.0.1:5000/api/employee/<uuid>
+http://127.0.0.1:5000/api/employees/<uuid>
 http://127.0.0.1:5000/api/employees/search
 ```
-* ### Web Application addresses
+### Web Application addresses
 ```
 http://127.0.0.1:5000/
 http://127.0.0.1:5000/departments
