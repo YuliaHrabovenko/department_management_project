@@ -1,7 +1,6 @@
-# Department App 
+# Department Management Application
 
-This is the project for EPAM Python [OnlineUA] Autumn course. The project provides
-Web Service (RESTful) for CRUD operations and Web Application for managing departments 
+The project provides Web Service (RESTful) for CRUD operations and Web Application for managing departments 
 and employees which uses aforementioned web service for storing and reading data
 from database.
 
@@ -14,15 +13,15 @@ The web application allows:
 
 1. Create a local copy of the project with a command:
 ```
-git clone git@github.com:julse-lia/final_epam_project.git
+git clone git@github.com:YuliaHrabovenko/department_management_project.git
 ```
-2. Enter final_epam_project directory
+2. Enter department_management_project directory
 ```
-cd final_epam_project
+cd department_management_project
 ```
-3. Create a virtual environment in the final_epam_project directory
+3. Create a virtual environment in the department_management_project directory
 ```
-python3 -m venv final_epam_project/venv
+python3 -m venv department_management_project/venv
 ```
 4. Activate your virtual environment
 ```
